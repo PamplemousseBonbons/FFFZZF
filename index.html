@@ -113,10 +113,11 @@
                     localStorage.lastusername = username;
             }
 
-                var classes = prompt("输入班级");
-                // var text = document.getElementById("class_name");
+                // var classes = prompt("输入班级");
+                var text = document.getElementById("class_name");
+                var classes = text.value;
                 if(classes != "" && classes != undefined && classes != null) {
-                    // text.value = classes;
+                    text.value = classes;
                     localStorage.lastclasses = classes;
                 }
 
