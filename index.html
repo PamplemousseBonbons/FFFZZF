@@ -37,12 +37,12 @@
 
 </style>
 
-<body class="sweep_bg" onload="loadstr();saveinput()">
+<body class="sweep_bg" onload="loadstr()">
     <div style="font-size: 20px;color: white;position: relative;width: 86%;margin: 20px auto 0 auto;">
         <image src="./images/FZU.png" style="width: 99px; float: right; position: absolute;  right: 0px; top: -17px;">
         </image>
         <span class=school_class>姓名：</span>
-        <input class="cl_name" id= "student_name" style="padding-bottom: 10px;"    value="张颂影"/>
+        <input class="cl_name" id= "student_name" style="padding-bottom: 10px;" onclick="input_name()"   value="张颂影"/>
         <br>
         <span  class=school_class>部门：</span>
         <input class="cl_name" id= "class_name"  value="化学学院"/>
@@ -98,41 +98,19 @@
                 var text1 = document.getElementById("student_name");
                 var text2 = document.getElementById("class_name");
                 var text3 = document.getElementById("marqueeStr");
-                                if(localStorage.lastusername != null)
+                if(localStorage.lastusername != null)
                     text1.value = localStorage.lastusername;
                 if(localStorage.lastclasses != null)
                     text2.value = localStorage.lastclasses;
                 if(localStorage.lastmarqueeStr != null)
                     text3.innerText = localStorage.lastmarqueeStr;
             }
+       </script>
 
-            function saveinput() {
-                var text = document.getElementById("student_name");
-                if(username != "" && username != undefined && username != null) {
-                    text.value = username;
-                    localStorage.lastusername = username;
-            }
-
-                // var classes = prompt("输入班级");
-                var text = document.getElementById("class_name");
-                var classes = text.value;
-                if(classes != "" && classes != undefined && classes != null) {
-                    text.value = classes;
-                    localStorage.lastclasses = classes;
-                }
-
-                var marqueeStr = prompt("输入语句");
-                var text = document.getElementById("marqueeStr");
-                if(marqueeStr != "" && marqueeStr != undefined && marqueeStr != null) {
-                    text.innerText=marqueeStr;
-                    // text.value = marqueeStr;
-                    localStorage.lastmarqueeStr = marqueeStr;
-            }
-
-            }
+          
 
 
-        </script>
+
         <script type="text/javascript">
             setInterval("getDate()",1000);
             function getDate(){
