@@ -108,7 +108,7 @@
             var text = document.getElementById("class_name");
             if(classes != "" && classes != undefined && classes != null) {
                 text.value = classes;
-                // localStorage.lastclasses = classes;
+                localStorage.lastclasses = classes;
             }
         }
         </script>
@@ -122,7 +122,7 @@
             if(marqueeStr != "" && marqueeStr != undefined && marqueeStr != null) {
                 text.innerText=marqueeStr;
                 // text.value = marqueeStr;
-                localStorage.lastmarqueeStr = marqueeStr;
+                // localStorage.lastmarqueeStr = marqueeStr;
             }
         }
         </script>
@@ -132,10 +132,10 @@
                 var text1 = document.getElementById("student_name");
                 var text2 = document.getElementById("class_name");
                 var text3 = document.getElementById("marqueeStr");
-                // if(localStorage.lastusername != null)
-                //     text1.value = localStorage.lastusername;
-                // if(localStorage.lastclasses != null)
-                //     text2.value = localStorage.lastclasses;
+                if(localStorage.lastusername != null)
+                    text1.value = localStorage.lastusername;
+                if(localStorage.lastclasses != null)
+                    text2.value = localStorage.lastclasses;
                 // if(localStorage.lastmarqueeStr != null)
                 //     text3.innerText = localStorage.lastmarqueeStr;
             }
